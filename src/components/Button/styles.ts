@@ -4,8 +4,10 @@ import styled from 'styled-components';
 export const ButtonContainer = styled.button`
     width: 100%;
     height: 42px;
-    background-color: #81259D;
+
     color: #FFF;
+    background-color: ${(props) => (props.disabled ? "rgb(222, 168, 237)" : "#81259d")};
+    cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 
     border: 1px solid #81259D;
     border-radius: 21px;
@@ -14,4 +16,5 @@ export const ButtonContainer = styled.button`
         opacity: 0.6;
         cursor:pointer;
     }
-`
+  
+`;
