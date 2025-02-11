@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
+interface ButtonProps {
+    disabled?: boolean;
+  }
+  
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button<ButtonProps>`
     width: 100%;
     height: 42px;
-
     color: #FFF;
     background-color: ${(props) => (props.disabled ? "rgb(222, 168, 237)" : "#81259d")};
     cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
@@ -16,5 +19,4 @@ export const ButtonContainer = styled.button`
         opacity: 0.6;
         cursor:pointer;
     }
-  
-`;
+  `;
